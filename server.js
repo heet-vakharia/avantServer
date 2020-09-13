@@ -6,12 +6,12 @@ import bcrypt from "bcryptjs";
 import sgMail from "@sendgrid/mail";
 import dotenv from "dotenv";
 // Modals
-import User from "./modals/user.js";
+import User from "./api/modals/user.js";
 // Routes
-import signInRoute from "./routes/signIn.js";
-import registerRoute from "./routes/register.js";
-import deleteRoute from "./routes/delete.js";
-import updateRoute from "./routes/update.js";
+import signInRoute from "./api/routes/signIn.js";
+import registerRoute from "./api/routes/register.js";
+import deleteRoute from "./api/routes/delete.js";
+import updateRoute from "./api/routes/update.js";
 // For ENV varibles
 dotenv.config();
 //Middlewares

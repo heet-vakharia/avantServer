@@ -40,7 +40,6 @@ const connect = () => {
   });
 };
 connect();
-
 // UserSchema
 
 app.get("/", (req, res) => {

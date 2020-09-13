@@ -12,12 +12,11 @@ const updateRoute = async (req, res, User, bcrypt, sendEmail) => {
     },
     { new: true },
     (err, msg) => {
-      if (err) {
+      if (err || !msg) {
         res.status(500).json("Server Err");
-      }
-      if (!err) {
+      } else {
         const { email, userid, _id } = msg;
-        //sendEmail(email, `Your ${item} has been sucessfully change`);
+        sendEmail(email, `Your ${item} has been sucessfully change`);
         res.status(200).json({ email, userid, _id });
       }
     }

@@ -43,6 +43,7 @@ connect();
 // UserSchema
 
 app.get("/", (req, res) => {
+  res.send("Welcome to Server");
   res.json("Welcome to Server");
 });
 // SignIn Route

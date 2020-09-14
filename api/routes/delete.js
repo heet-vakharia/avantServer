@@ -5,10 +5,10 @@ const deleteRoute = (req, res, User, sendEmail) => {
       res.status(500).json("User Not Deleted");
     } else {
       const { email, userid } = msg;
-      sendEmail(
-        msg.email,
-        `${userid} your account has been sucessfully deleted`
-      );
+      // sendEmail(
+      //   msg.email,
+      //   `${userid} your account has been sucessfully deleted`
+      // );
       res.status(200).json(msg);
     }
   });

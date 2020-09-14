@@ -9,7 +9,7 @@ const registerRoute = (req, res, User, bcrypt, sendEmail) => {
         res
           .status(201)
           .json({ id: user._id, email: user.email, userid: user.userid });
-        sendEmail(email, `Thank you for registering ${userid}`);
+        // sendEmail(email, `Thank you for registering ${userid}`);
       }
     });
   } else {

@@ -7,7 +7,7 @@ const signInRoute = async (req, res, User, bcrypt, sendEmail) => {
       const { userid, password, _id, email } = user;
       bcrypt.compare(userPassword, password, (err, resp) => {
         if (resp) {
-          sendEmail(email, `A new signin from your account`);
+          // sendEmail(email, `A new signin from your account`);
           res.status(302).json({ userid, email, id: _id });
         } else {
           res.status(404).json({ err: "Invalid Password" });
